@@ -1,0 +1,43 @@
+:root {
+  --whiteBg: #eeee;
+  --whiteBg2: rgba(192, 192, 192, 0.933);
+  --greenBg: rgb(27, 168, 27);
+  --greenBg2: rgb(18, 136, 18);
+}
+.primaryBtn {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: none;
+  background: var(--greenBg);
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+.primaryBtn:hover {
+  background: var(--greenBg2);
+}
+input {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid black;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  outline: none;
+}
+input::placeholder {
+  opacity: 1;
+  color: var(--whiteBg2);
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+html {
+  background: var(--whiteBg);
+  font-size: 12px;
+}

@@ -1,0 +1,42 @@
+<div class="navWrapper">
+  <div class="search">
+    <button class="primaryBtn">بحث</button>
+    <input type="text" name="" id="" dir="rtl" placeholder="البحث عن طريق التاغ" />
+  </div>
+  <div class="logo">
+    <a href="/"> حدَّثَنَا</a>
+    </div>
+    <nav class="bigScreen-nav">
+      <ul>
+        <a href="/"><li>الرئيسية</li></a>
+        <a href="/"><li>قراءة الكل</li></a>
+        <a href="/"><li>مساحة المسؤولين</li></a>
+      </ul>
+    </nav>
+    <nav class="smallScreen-nav" dir="rtl">
+      <div onclick="toggleMenu()">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <ul id="mobile-nav">
+        <div onclick="toggleMenu()" style="width: 100%">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+        <a href="/"><li>الرئيسية</li></a>
+        <a href="/"><li>قراءة الكل</li></a>
+        <a href="/"><li>مساحة المسؤولين</li></a>
+      </ul>
+    </nav>
+    <script>
+      let isMenuOpen = false;
+      const mobileNav = document.getElementById('mobile-nav');
+      function toggleMenu() {
+        isMenuOpen = !isMenuOpen;
+        if (isMenuOpen) {
+          mobileNav.style.display = 'flex';
+        } else {
+          mobileNav.style.display = 'none';
+        }
+      }
+    </script>
+  </div>
+</div>
