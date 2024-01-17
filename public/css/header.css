@@ -1,17 +1,27 @@
-.navWrapper {
+.outerNav {
+  width: 100%;
   position: fixed;
-  width: 95vw;
-  /* max-width: 1333px; */
-  font-size: 18px;
-  padding-left: 50px;
-  padding-right: 50px;
-  padding: 10px;
-  width: calc(100vw-10px);
+  z-index: 99999;
+  background-color: #eeee;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+}
+.innerNav {
+  /* position: fixed; */
+  width: 100%;
+  /* max-width: 1333px; */
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
   background-color: #eee;
-  z-index: 99999;
+
+  top: 0;
+  right: 0;
+  padding: 5px;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 .search {
   flex: 1;
@@ -36,15 +46,15 @@
   text-decoration: none;
   color: black;
 }
-.navWrapper > .bigScreen-nav > ul {
+.innerNav > .bigScreen-nav > ul {
   display: flex;
   flex-direction: row;
   gap: 15px;
   align-items: center;
   justify-content: space-between;
 }
-.navWrapper > .bigScreen-nav > ul > a,
-.navWrapper > .bigScreen-nav > ul > a > li {
+.innerNav > .bigScreen-nav > ul > a,
+.innerNav > .bigScreen-nav > ul > a > li {
   text-decoration: none;
   list-style: none;
 }
@@ -72,9 +82,9 @@
 }
 
 @media screen and (min-width: 640px) {
-  .navWrapper {
-    width: 100vw;
-    max-width: 1333px;
+  .innerNav {
+    width: 100%;
+    max-width: 1320px;
   }
   .smallScreen-nav {
     display: none;
